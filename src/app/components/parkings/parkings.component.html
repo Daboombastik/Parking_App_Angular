@@ -1,0 +1,17 @@
+<mat-spinner class="spinner" color="accent" diameter="30" *ngIf="!isLoaded"></mat-spinner>
+
+<div *ngIf="parking_list; else nothing">
+  <mat-card *ngFor='let p of parking_list' class='parking-card'>
+    <span class='parking-card-font'>Name: {{p.nom}}</span> <span class='parking-card-float'
+                                                                 [ngStyle]="styleParkingStatus(p)">{{p.statut}}</span><br>
+    <span *ngIf="p.statut !== 'Données non disponibles'"> Places disponibles : {{p.nbPlacesDispo}} </span>
+  </mat-card>
+</div>
+<ng-template #nothing> No parkings found near you</ng-template>
+
+<!--<mat-spinner style="margin: 0 auto;" color="accent" diameter="30" *ngIf="!isLoaded"></mat-spinner>-->
+
+<!--<mat-card *ngFor="let parking of parking_list" class="parking-card" [routerLink]="['/parking', parking.identifiant]">-->
+<!--  <span style="font-weight: bold;"> Parking {{parking.nom}} </span> <span style="float: right;" [ngStyle]="calculStyleStatut(parking)">{{parking.statut}}</span><br>-->
+<!--  <span *ngIf="parking.statut !== 'Données non disponibles'"> Places disponibles : {{parking.nbPlacesDispo}} </span>-->
+<!--</mat-card>-->

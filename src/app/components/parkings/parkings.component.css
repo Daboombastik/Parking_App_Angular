@@ -1,0 +1,16 @@
+.parking-card {
+  margin-bottom: 5px;
+  margin-left: 10px;
+  margin-right: 10px;
+  cursor: pointer;
+}
+.parking-card-font{
+  font-weight: bold;
+}
+.parking-card-float {
+  float: right;
+}
+
+.spinner {
+  margin: 0 auto;
+}
